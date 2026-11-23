@@ -1,0 +1,28 @@
+[B02] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B02 · DB_PATH=/data/egov.db
+[B01] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B01 · DB_PATH=/data/egov.db
+[B04] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B04 · DB_PATH=/data/egov.db
+[B03] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B03 · DB_PATH=/data/egov.db
+[B01]  1 failed  50 passed (2.5m) 
+[B05] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B05 · DB_PATH=/data/egov.db
+[B04]  1 failed  50 passed (2.5m) 
+[B02]  1 failed  50 passed (2.6m) 
+[B06] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B06 · DB_PATH=/data/egov.db
+[B07] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B07 · DB_PATH=/data/egov.db
+[B03]  4 failed  47 passed (3.2m) 
+[B08] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B08 · DB_PATH=/data/egov.db
+[B05]  1 failed  50 passed (2.4m) 
+[B09] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B09 · DB_PATH=/data/egov.db
+[B06]  1 failed  50 passed (2.8m) 
+[B07]  1 failed  50 passed (2.8m) 
+[B10] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B10 · DB_PATH=/data/egov.db
+[B11] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B11 · DB_PATH=/data/egov.db
+[B08]  1 failed  50 passed (2.7m) 
+[B12] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B12 · DB_PATH=/data/egov.db
+[B09]  1 failed  50 passed (2.9m) 
+[B03,B07] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B03,B07 · DB_PATH=/data/egov.db
+[B11]  2 failed  49 passed (3.4m) 
+[B12]  1 failed  50 passed (2.9m) 
+[B01,B05,B09] [egov] listening on :3000 · TEST_MODE=1 · BUG_MODE=B01,B05,B09 · DB_PATH=/data/egov.db
+[B10]  3 failed  48 passed (3.9m) 
+[B03,B07]  5 failed  46 passed (2.9m) 
+[B01,B05,B09]  3 failed  48 passed (2.4m) 

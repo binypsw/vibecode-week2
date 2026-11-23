@@ -1,0 +1,95 @@
+npm notice run gotham-egov-eservice@1.0.0 npx
+npm notice run 'playwright' test --output=test-results-bug/B04
+
+Running 51 tests using 1 worker
+
+  ✓   1 tests/part-a.spec.js:319:1 › TC-AUTH-01 · เลขบัตร 13 หลักและ checksum (1.7s)
+  ✓   2 tests/part-a.spec.js:345:1 › TC-AUTH-02 · ล็อก OTP 15 นาทีและรีเซ็ตตัวนับ (1.9s)
+  ✓   3 tests/part-a.spec.js:396:1 › TC-AUTH-03 · ลงทะเบียนครั้งแรก (1.9s)
+  ✓   4 tests/part-a.spec.js:436:1 › TC-AUTH-04 · SSO และหน้าตั้งต้นของเจ้าหน้าที่ทุกบทบาท (3.0s)
+  ✓   5 tests/part-a.spec.js:462:1 › TC-FEE-01 · ค่าธรรมเนียมและค่าขอบของทั้งสามบริการ (1.2s)
+  ✓   6 tests/part-a.spec.js:502:1 › TC-SUBMIT-01 · ยื่น SV-01 ตั้งแต่กรอกข้อมูลถึงเข้าคิว (1.2s)
+  ✓   7 tests/part-a.spec.js:565:1 › TC-SUBMIT-02 · เอกสารบังคับครบก่อนชำระ (993ms)
+  ✓   8 tests/part-a.spec.js:605:1 › TC-SUBMIT-03 · ร่าง การยกเลิก และยกเลิกชนกับรับเรื่อง (2.9s)
+  ✓   9 tests/part-a.spec.js:702:1 › TC-UPLOAD-01 · ขนาด 5 MB และจำนวนสูงสุด 5 ไฟล์ (6.1s)
+  ✓  10 tests/part-a.spec.js:749:1 › TC-UPLOAD-02 · ตรวจชนิดไฟล์จากเนื้อหาและไม่เก็บไฟล์ที่ปฏิเสธ (2.1s)
+  ✓  11 tests/part-a.spec.js:794:1 › TC-PAY-01 · QR ใช้ได้ก่อนครบ 15 นาทีและสร้างใหม่ได้ (1.3s)
+  ✓  12 tests/part-a.spec.js:829:1 › TC-PAY-02 · ยอดขาด ยอดเกิน และ callback ซ้ำ (613ms)
+  ✓  13 tests/part-a.spec.js:845:1 › TC-PAY-03 · ชำระพร้อมกันหกใบและแยกเจ้าของ (1.3s)
+  ✓  14 tests/part-a.spec.js:870:1 › TC-PAY-04 · เลขคำขอและใบเสร็จข้ามปี (935ms)
+  ✓  15 tests/part-a.spec.js:898:1 › TC-QUEUE-01 · ลำดับคิว ตัวกรอง และขอบเขตแผนก (1.8s)
+  ✓  16 tests/part-a.spec.js:961:1 › TC-QUEUE-02 · รับเรื่องชนกันบนหน้าเว็บและ API (2.9s)
+  ✓  17 tests/part-a.spec.js:1032:1 › TC-QUEUE-03 · เพดาน 10 งานและส่งแก้คืนผู้ถือเดิม (2.9s)
+  ✓  18 tests/part-a.spec.js:1077:1 › TC-SLA-01 · กำหนดเสร็จตามวันทำการและเวลาตัดรอบ (4.5s)
+  ✘  19 tests/part-a.spec.js:1115:1 › TC-SLA-02 · หยุดนับ SLA ระหว่างรอแก้และเริ่มนับอีกครั้ง (1.5s)
+  ✓  20 tests/part-a.spec.js:1180:1 › TC-SLA-03 · ปกติ ใกล้ครบกำหนด เกินกำหนด หยุดนับ และปิดแล้ว (3.3s)
+  ✓  21 tests/part-a.spec.js:1279:1 › TC-NOTI-01 · ผู้รับแจ้งเตือนตามระดับและแผนก (1.3s)
+  ✓  22 tests/part-a.spec.js:1298:1 › TC-NOTI-02 · แจ้งครั้งเดียวต่อระดับ ข้ามระดับ และส่งตามขั้นตอน (4.8s)
+  ✓  23 tests/part-b.spec.js:253:1 › TC-WORKFLOW-01 อนุมัติและออกเอกสาร SV-01 (1.3s)
+  ✓  24 tests/part-b.spec.js:289:1 › TC-WORKFLOW-02 ส่ง SV-02 ผ่านหัวหน้าและออกเอกสาร (2.1s)
+  ✓  25 tests/part-b.spec.js:330:1 › TC-WORKFLOW-03 ส่ง SV-03 ผ่านทะเบียน โยธา และหัวหน้า (2.1s)
+  ✓  26 tests/part-b.spec.js:378:1 › TC-WORKFLOW-04 ตีกลับได้สูงสุดสองครั้งและรักษาสิทธิ์ตามบริการ (4.0s)
+  ✓  27 tests/part-b.spec.js:431:1 › TC-WORKFLOW-05 เหตุผลตีกลับและไม่อนุมัติอย่างน้อยสิบตัวอักษร (2.0s)
+  ✓  28 tests/part-b.spec.js:467:1 › TC-WORKFLOW-06 ขอบเวลาแก้ไข 168 ชั่วโมง (1.2s)
+  ✓  29 tests/part-b.spec.js:504:1 › TC-DOC-01 ออก PDF และตรวจข้อมูลเอกสาร (872ms)
+  ✓  30 tests/part-b.spec.js:539:1 › TC-DOC-02 ตรวจเอกสารสาธารณะและปิดบังข้อมูล (322ms)
+  ✓  31 tests/part-b.spec.js:553:1 › TC-DOC-03 ขอบวันหมดอายุ วันอธิกสุรทิน และความถูกต้องของลายเซ็น (2.4s)
+  ✓  32 tests/part-b.spec.js:591:1 › TC-PDPA-01 ปิดบังเลขบัตรเจ้าหน้าที่และให้เจ้าของเห็นเลขเต็ม (1.1s)
+  ✓  33 tests/part-b.spec.js:624:1 › TC-PDPA-02 จำกัดข้อมูลเลขบัตรใน JSON เจ้าหน้าที่และหัวหน้า (499ms)
+  ✓  34 tests/part-b.spec.js:650:1 › TC-PDPA-03 แสดงเลขเต็มหลังให้เหตุผลและบันทึก Audit ครั้งเดียว (1.4s)
+  ✓  35 tests/part-b.spec.js:712:1 › TC-DASH-01 ตัวเลขเริ่มต้นและตัวกรองบริการ (579ms)
+  ✓  36 tests/part-b.spec.js:739:1 › TC-DASH-02 ตัวเลขย้อนหลังและเปอร์เซ็นต์จากจำนวนปิดงาน (715ms)
+  ✓  37 tests/part-b.spec.js:799:1 › TC-DASH-03 ส่งออก Excel/PDF ตรงกับ KPI และไม่มีข้อมูลส่วนบุคคล (1.7s)
+  ✓  38 tests/part-b.spec.js:843:1 › TC-DASH-04 ขอบเวลาปิดงาน 16:29:59 / 16:30:00 / 16:30:01 (1.2s)
+  ✓  39 tests/part-b.spec.js:871:1 › TC-AUDIT-01 บันทึกเหตุการณ์ ฟิลด์ ตัวกรอง และ CSV (2.4s)
+  ✓  40 tests/part-b.spec.js:961:1 › TC-AUDIT-02 API และหน้าจอไม่อนุญาตให้แก้หรือลบ Audit (830ms)
+  ✓  41 tests/part-b.spec.js:988:1 › TC-AUDIT-03 ช่วงวันที่ Audit ใช้เขตเวลาไทย (1.9s)
+  ✓  42 tests/part-b.spec.js:1028:1 › TC-RBAC-01 จำกัดการเปิดคำขอและเอกสารให้เฉพาะเจ้าของ (539ms)
+  ✓  43 tests/part-b.spec.js:1051:1 › TC-RBAC-02 เฉพาะหัวหน้าอนุมัติและไม่อนุมัติ SV-02 (988ms)
+  ✓  44 tests/part-b.spec.js:1075:1 › TC-RBAC-03 ตารางสิทธิ์หน้า API เมนู และแผนก (6.5s)
+  ✓  45 tests/part-b.spec.js:1169:1 › TC-RBAC-04 เปลี่ยนบริการ วันหยุด บทบาท และตรวจยอดที่ล็อก (2.3s)
+  ✓  46 tests/part-b.spec.js:1231:1 › TC-RBAC-05 ขอบเขตการแสดงรายการและดาวน์โหลดไฟล์แนบ (2.2s)
+  ✓  47 tests/part-b.spec.js:1298:1 › TC-RBAC-06 ค่าขอบค่าธรรมเนียม SLA วันหยุด และการแก้บทบาทตนเอง (1.9s)
+  ✓  48 tests/part-b.spec.js:1359:1 › TC-NFR-01 Responsive 375 / 768 / 1280 และยื่นคำขอที่ 375px (3.1s)
+  ✓  49 tests/part-b.spec.js:1469:1 › TC-NFR-02 WCAG axe คีย์บอร์ด label และข้อความสถานะ (10.7s)
+  ✓  50 tests/part-b.spec.js:1538:1 › TC-NFR-03 Health เวลาโหลด นาฬิกา และผลหลัง reset ที่ทำซ้ำได้ (1.5s)
+  ✓  51 tests/part-b.spec.js:1599:1 › TC-NFR-04 ตรวจเลขบัตรและเบอร์โทรใน DB ดัมพ์ และ log (902ms)
+
+
+  1) tests/part-a.spec.js:1115:1 › TC-SLA-02 · หยุดนับ SLA ระหว่างรอแก้และเริ่มนับอีกครั้ง › ตีกลับหนึ่งวันทำการก่อนส่งแก้ 
+
+    Error: expect(received).toMatchObject(expected)
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+    -   "dueAt": "2026-12-08T16:30:00+07:00",
+    +   "dueAt": "2026-12-04T16:30:00+07:00",
+      }
+
+      72 |   expect(response.status(), response.url()).toBe(status);
+      73 |   const body = await response.json();
+    > 74 |   if (fields) expect(body).toMatchObject(fields);
+         |                            ^
+      75 |   return body;
+      76 | }
+      77 |
+        at json (/workspace/plans/egov-eservice/app/tests/part-a.spec.js:74:28)
+        at expectDue (/workspace/plans/egov-eservice/app/tests/part-a.spec.js:309:3)
+        at /workspace/plans/egov-eservice/app/tests/part-a.spec.js:1126:5
+        at /workspace/plans/egov-eservice/app/tests/part-a.spec.js:1116:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-bug/B04/part-a-TC-SLA-02-·-หยุดนับ-9b456-่างรอแก้และเริ่มนับอีกครั้ง/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-bug/B04/part-a-TC-SLA-02-·-หยุดนับ-9b456-่างรอแก้และเริ่มนับอีกครั้ง/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-bug/B04/part-a-TC-SLA-02-·-หยุดนับ-9b456-่างรอแก้และเริ่มนับอีกครั้ง/error-context.md
+
+  1 failed
+    tests/part-a.spec.js:1115:1 › TC-SLA-02 · หยุดนับ SLA ระหว่างรอแก้และเริ่มนับอีกครั้ง ──────────
+  50 passed (2.5m)

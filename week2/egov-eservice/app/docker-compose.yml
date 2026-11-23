@@ -1,0 +1,27 @@
+# รันคำสั่งเดียว:
+#   TEST_MODE=1 BUG_MODE= docker compose up --build -d        # เว็บถูกต้อง + เปิด /api/test/*
+#   TEST_MODE=1 BUG_MODE=B03 docker compose up --build -d     # เปิดบั๊ก (BUGS.md) · เปลี่ยนชุดบั๊ก = รันคำสั่งนี้ใหม่
+#   docker compose up --build -d                              # ไม่ตั้ง TEST_MODE → /api/test/* ตอบ 404
+# เว็บ: http://localhost:${PORT:-3000} · ฐานข้อมูล SQLite บน host: ./data/egov.db (ใช้เป็น DB_PATH ของ TC-NFR-04)
+services:
+  web:
+    build: .
+    image: gotham-egov-eservice:latest
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      TEST_MODE: "${TEST_MODE:-}"
+      BUG_MODE: "${BUG_MODE:-}"
+      PORT: "3000"
+      DB_PATH: /data/egov.db
+      BASE_URL: "${BASE_URL:-http://localhost:${PORT:-3000}}"
+      TZ: Asia/Bangkok
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      start_period: 10s
+      retries: 5

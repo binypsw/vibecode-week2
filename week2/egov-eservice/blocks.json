@@ -1,0 +1,223 @@
+{
+  "goal": "สร้างเว็บ e-Service กลางของเทศบาลนครก็อตแทมตามชุดโจทย์ใน /workspace/egov-brief (อ่าน README.md ก่อน) ต้องทำตาม REQUIREMENTS.md CONTRACT.md TEST-DATA.md DECISIONS.md ครบทุกข้อ รันด้วย Docker Compose คำสั่งเดียว รองรับ TEST_MODE=1 และ BUG_MODE ตาม BUGS.md และมีชุด Playwright ครบทุก TC ใน TEST-PLAN.md (51 TC)",
+  "name": "egov-eservice",
+  "blocks": [
+    {
+      "id": "B01",
+      "title": "โครงโปรเจกต์ + Docker + DB + test hook",
+      "size": "L",
+      "depends_on": [],
+      "skill": "yolo",
+      "difficulty": 4,
+      "output": "server.js",
+      "done": "docker compose up ได้ด้วยคำสั่งเดียว · GET /api/health ตอบ 200 {status:ok} · POST /api/test/reset ล้างและ seed ตาม TEST-DATA ได้ และ PUT /api/test/clock ตั้งนาฬิกาได้ (เฉพาะ TEST_MODE=1 มิฉะนั้น 404) · server.js โหลดทุกไฟล์ใน routes/*.js อัตโนมัติ",
+      "exclusive": false,
+      "detail": "Stack: Node 20 + Express + SQLite (ไฟล์ที่ DB_PATH) เพราะ NFR-04 ต้อง inspect ฐานข้อมูลได้ · ไฟล์ที่ B01 เป็นเจ้าของ: server.js package.json Dockerfile docker-compose.yml db/*.js lib/clock.js lib/audit.js lib/auth-middleware.js lib/bug.js (อ่าน BUG_MODE เป็นเซ็ต isBug('B03')) lib/crypto.js (AES-256-GCM เลขบัตร/เบอร์) views/layout (header + data-testid ทุกหน้าตาม CONTRACT 2.1) · schema ทุกตารางที่ทีมอื่นต้องใช้ (users cases drafts attachments payments notifications audit holidays services documents) · seed ครบตาม TEST-DATA รวมวันหยุด 4 วัน บัญชีเจ้าหน้าที่ และคำขอ seed 30 ใบ · server.js ต้องโหลด routes/*.js อัตโนมัติ (แต่ละไฟล์ export function(app, ctx)) เพื่อให้บล็อกอื่นเพิ่มไฟล์ routes ได้โดยไม่แก้ server.js · ตั้ง body limit ≥ 6 MB · middleware ประเมินแจ้งเตือน SLA/ยกเลิกอัตโนมัติทุก request ให้เรียก hook ที่บล็อกอื่นลงทะเบียน (lib/hooks.js) · ฝัง RBAC middleware requireRole(...) ใช้ร่วมกัน · ต้องอ่าน: README, CONTRACT, TEST-DATA, DECISIONS, REQUIREMENTS §4",
+      "timeout": 1800
+    },
+    {
+      "id": "B02",
+      "title": "Playwright ชุด A: AUTH FEE SUBMIT UPLOAD PAY QUEUE SLA NOTI",
+      "size": "M",
+      "depends_on": [],
+      "skill": "cyolo",
+      "difficulty": 2,
+      "output": "tests/part-a.spec.js",
+      "done": "ทุก TC ในหมวด AUTH FEE SUBMIT UPLOAD PAY QUEUE SLA NOTI (22 TC) มี test() ที่ชื่อขึ้นต้นด้วยรหัส TC และ assert ตรงตามการ์ดใน TEST-PLAN ทุกค่าขอบ · ทุก TC เริ่มด้วย POST /api/test/reset แล้วล็อกอินใหม่",
+      "exclusive": false,
+      "detail": "อ่านได้เฉพาะ TEST-PLAN.md CONTRACT.md TEST-DATA.md (และ DECISIONS/REQUIREMENTS ถ้าจำเป็นต้องดูตัวเลข) ห้ามอ่านโค้ดเว็บ · เขียนไฟล์เฉพาะ tests/part-a.spec.js กับ tests/lib-a/* · ห้ามแก้ผลที่คาดหวังให้ตรงกับหน้าจอ · อ่านค่า BASE_URL จาก env",
+      "timeout": 1500
+    },
+    {
+      "id": "B03",
+      "title": "Playwright ชุด B: WORKFLOW DOC PDPA DASH AUDIT RBAC NFR",
+      "size": "L",
+      "depends_on": [],
+      "skill": "cyolo",
+      "difficulty": 3,
+      "output": "tests/part-b.spec.js",
+      "done": "ทุก TC ในหมวด WORKFLOW DOC PDPA DASH AUDIT RBAC NFR (29 TC รวมกับชุด A ครบ 51) มี test() ที่ชื่อขึ้นต้นด้วยรหัส TC และ assert ตรงตามการ์ดใน TEST-PLAN · NFR-02 ใช้ @axe-core/playwright",
+      "exclusive": false,
+      "detail": "อ่านได้เฉพาะ TEST-PLAN.md CONTRACT.md TEST-DATA.md (และ DECISIONS/REQUIREMENTS ถ้าจำเป็น) ห้ามอ่านโค้ดเว็บ · เขียนไฟล์เฉพาะ tests/part-b.spec.js กับ tests/lib-b/* · TC-NFR-04 อ่านฐานข้อมูลที่ DB_PATH · ห้ามแก้ผลที่คาดหวังให้ตรงกับหน้าจอ",
+      "timeout": 2400
+    },
+    {
+      "id": "B04",
+      "title": "ล็อกอินประชาชน/เจ้าหน้าที่ + ลงทะเบียน + OTP lock",
+      "size": "M",
+      "depends_on": [
+        "B01"
+      ],
+      "skill": "yolo",
+      "difficulty": 3,
+      "output": "routes/auth.js",
+      "done": "ผ่านกฎ BR-01 (checksum เลขบัตร) BR-02 (OTP ผิด 3 ครั้งล็อก 15 นาทีตามนาฬิกาทดสอบ) BR-03 (ลงทะเบียน) และ FR-03 (staff login + หน้าตั้งต้นตามบทบาท) พร้อม data-testid หน้า /login /register",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/auth.js และ views/auth/* · ต้องอ่าน REQUIREMENTS BR-01..03 FR-01..03 · CONTRACT 2.2 2.3 และ TEST-DATA ตารางบัญชี · บันทึก Audit STAFF_LOGIN ผ่าน lib/audit.js",
+      "timeout": 1500
+    },
+    {
+      "id": "B05",
+      "title": "ไลบรารีวันทำการ + SLA + ระดับเตือน",
+      "size": "M",
+      "depends_on": [
+        "B01"
+      ],
+      "skill": "review",
+      "difficulty": 4,
+      "output": "lib/sla.js",
+      "done": "ฟังก์ชัน nextBusinessDay / dueAt / pauseDays / slaLevel ให้ผลตรงตาราง BR-12 BR-13 BR-14 ทุกแถวรวมค่าขอบ 16:29:59 16:30:00 16:30:01 และวันหยุด 7 ธ.ค. 10 ธ.ค. 31 ธ.ค. 1 ม.ค. · ใช้เขตเวลา Asia/Bangkok และอ่านเวลาจาก lib/clock.js เท่านั้น",
+      "exclusive": false,
+      "detail": "งานกฎตัวเลขเยอะ ให้ผู้ตรวจ (อีกฝั่ง CLI) ตรวจเทียบ REQUIREMENTS BR-12/13/14 และ TEST-PLAN SLA-01..03 ทีละแถว · เขียนเฉพาะ lib/sla.js · ฝังบั๊ก BUG_MODE B03 (ไม่ข้ามวันหยุดในตาราง) และ B04 (ไม่หยุดนับระหว่าง NEED_FIX) ตาม BUGS.md ผ่าน lib/bug.js โดยเปลี่ยนเฉพาะจุดที่ระบุ",
+      "max_rounds": 2,
+      "timeout": 1500
+    },
+    {
+      "id": "B06",
+      "title": "แคตตาล็อก + ค่าธรรมเนียม + แนบไฟล์ + ร่าง + หน้าคำขอประชาชน",
+      "size": "L",
+      "depends_on": [
+        "B01"
+      ],
+      "skill": "review",
+      "difficulty": 3,
+      "output": "routes/citizen.js",
+      "done": "ผ่าน BR-04 BR-05 (ค่าธรรมเนียมทุกค่าขอบ) BR-06 BR-07 BR-08 (ไฟล์และเอกสารบังคับ) FR-07 ร่าง และ BR-22 (คำขอคนอื่น 404 ข้อความเดียวกับเลขที่ไม่มี) พร้อม data-testid หน้า /citizen /citizen/new/:service /citizen/cases/:caseNo",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/citizen.js และ views/citizen/* · ตรวจชนิดไฟล์จาก magic bytes · ฝังบั๊ก B01 (SV-03 พื้นที่ 101 ใช้ > 101) B02 (ไฟล์ 5,242,880 ไบต์ถูกปฏิเสธ) B06 (IDOR คำขอคนอื่น) ตาม BUGS.md · ผู้ตรวจตรวจเทียบ BR-04..08 และ TC-FEE-01 TC-UPLOAD-01/02 TC-RBAC-01",
+      "timeout": 2400
+    },
+    {
+      "id": "B07",
+      "title": "ชำระเงิน PromptPay จำลอง + เลขคำขอ + ใบเสร็จ",
+      "size": "M",
+      "depends_on": [
+        "B05",
+        "B06"
+      ],
+      "skill": "yolo",
+      "difficulty": 3,
+      "output": "routes/payment.js",
+      "done": "ผ่าน BR-09 (EG-<พ.ศ.>-<6 หลัก> ไม่ซ้ำเมื่อจ่ายพร้อมกัน ข้ามปี) BR-10 (QR 15:00) BR-11 (ยอดตรง ล็อกยอด callback ซ้ำ idempotent ใบเสร็จ RC-) และคำนวณ dueAt ด้วย lib/sla.js ตอนชำระ",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/payment.js และ views/payment/* · POST /api/test/payments/<ref>/pay ตาม CONTRACT · ฝังบั๊ก B05 (QR อายุ 15:00 พอดียังจ่ายได้) ตาม BUGS.md",
+      "timeout": 1500
+    },
+    {
+      "id": "B08",
+      "title": "คิวเจ้าหน้าที่ + รับเรื่อง + รายละเอียด + แสดงเลขเต็ม + ไฟล์แนบ",
+      "size": "L",
+      "depends_on": [
+        "B05"
+      ],
+      "skill": "yolo",
+      "difficulty": 4,
+      "output": "routes/officer.js",
+      "done": "ผ่าน BR-16 (ลำดับคิว) BR-17 (รับเรื่อง 1 คน 409) BR-18 (งานในมือ 10) BR-24 (ปิดบังเลขบัตร API ไม่ส่งเลขเต็ม UNMASK ต้องมีเหตุผลและบันทึก Audit) BR-29 (สิทธิ์ไฟล์แนบ) พร้อม data-testid หน้า /officer/queue /officer/cases/:caseNo (ปุ่มดำเนินการเรียก API ของ routes/workflow.js)",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/officer.js และ views/officer/* · ฝังบั๊ก B08 (claim ข้ามการตรวจผู้ถือ) B09 (API คิวส่ง idNo เต็ม) B11 (unmask ไม่บันทึก Audit) ตาม BUGS.md · ปุ่มไม่ render ตาม CONTRACT ข้อ 5",
+      "timeout": 2400
+    },
+    {
+      "id": "B09",
+      "title": "ขั้นตอนอนุมัติ: ตีกลับ ส่งต่อ อนุมัติ ส่งแก้ ยกเลิกอัตโนมัติ",
+      "size": "L",
+      "depends_on": [
+        "B05"
+      ],
+      "skill": "yolo",
+      "difficulty": 4,
+      "output": "routes/workflow.js",
+      "done": "ผ่าน BR-19 (ตีกลับ ≤ 2 ครั้ง เหตุผล ≥ 10 ตัวอักษร) BR-20 (168 ชม. ยกเลิกอัตโนมัติ) BR-21 (เส้นทางและอำนาจ SV-01/02/03 ตรวจสิทธิ์ที่ API) BR-13 (หยุดนับ SLA ใช้ lib/sla.js) และหน้า /head/approvals",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/workflow.js และ views/head/* · ลงทะเบียน hook ยกเลิกอัตโนมัติผ่าน lib/hooks.js · ฝังบั๊ก B07 (เจ้าหน้าที่อนุมัติ SV-02 ได้เองที่ API) และ B12 (ตีกลับครั้งที่ 3 ได้) ตาม BUGS.md · Audit RETURN FORWARD APPROVE REJECT",
+      "timeout": 2400
+    },
+    {
+      "id": "B10",
+      "title": "แจ้งเตือนในระบบ (กระดิ่ง) ตามระดับ SLA",
+      "size": "M",
+      "depends_on": [
+        "B05"
+      ],
+      "skill": "cyolo",
+      "difficulty": 3,
+      "output": "routes/notifications.js",
+      "done": "ผ่าน BR-15: ผู้รับตามผู้ถือ/แผนก/หัวหน้า/ผู้ออกเอกสาร · 1 ครั้งต่อระดับต่อคำขอต่อคน (เรียกซ้ำไม่เกิดใหม่) · เกินกำหนดแจ้ง head เพิ่มโดยไม่ซ้ำ · หน้า /notifications",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/notifications.js และ views/notifications/* · ลงทะเบียน hook ประเมินทุก request ผ่าน lib/hooks.js (CONTRACT ข้อ 7) · ใช้ slaLevel จาก lib/sla.js ห้ามคำนวณซ้ำเอง",
+      "timeout": 1500
+    },
+    {
+      "id": "B11",
+      "title": "ออกเอกสารดิจิทัล + ลายเซ็น HMAC + หน้า /verify",
+      "size": "M",
+      "depends_on": [
+        "B01"
+      ],
+      "skill": "cyolo",
+      "difficulty": 3,
+      "output": "routes/documents.js",
+      "done": "ผ่าน BR-23: ออกเอกสาร (เลขเอกสาร HMAC-SHA256 รหัสตรวจ QR) ดาวน์โหลด PDF · /verify/<รหัส> ไม่ต้องล็อกอิน 4 ผล (ถูกต้อง หมดอายุ ลายเซ็นไม่ถูกต้อง 404 ไม่พบเอกสาร) · วันหมดอายุ SV-01 90 วัน SV-02/03 1 ปี รวมกรณี 29 ก.พ. · ปิดบังชื่อผู้ยื่น",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/documents.js และ views/documents/* · Audit ISSUE · test hook tamper ตาม CONTRACT",
+      "timeout": 1500
+    },
+    {
+      "id": "B12",
+      "title": "Dashboard + ส่งออก Excel/PDF",
+      "size": "M",
+      "depends_on": [
+        "B05"
+      ],
+      "skill": "review",
+      "difficulty": 4,
+      "output": "routes/reports.js",
+      "done": "ผ่าน BR-25 BR-26: 5 ตัวชี้วัด (ทันกำหนด % = ทัน ÷ ปิดงาน ค่าขอบ 16:30:00 ทัน) รายปีรวมตัวเลขก่อนคิด % ส่งออกเท่าจอและบันทึก Audit EXPORT · ไม่มีชื่อ/เลขบัตร/เบอร์ในหน้าและไฟล์ส่งออก",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/reports.js และ views/dashboard/* · งานตัวเลขเยอะ ผู้ตรวจเทียบ TEST-DATA ตาราง 7 และ TC-DASH-01..04 · ฝังบั๊ก B10 (ทันกำหนด % หารด้วยรับเรื่อง) ตาม BUGS.md",
+      "timeout": 1500
+    },
+    {
+      "id": "B13",
+      "title": "Audit Trail + หน้าผู้ดูแลระบบ (บริการ วันหยุด ผู้ใช้)",
+      "size": "M",
+      "depends_on": [
+        "B01"
+      ],
+      "skill": "cyolo",
+      "difficulty": 3,
+      "output": "routes/admin.js",
+      "done": "ผ่าน BR-27 (10 เหตุการณ์ กรองวันที่ตามเวลาไทย CSV แก้/ลบ 405) BR-28 (ค่าธรรมเนียม 0–100,000 SLA 1–60 วันหยุดซ้ำ 409 เปลี่ยนบทบาทตัวเอง 409) และหน้า /audit /admin/services /admin/holidays /admin/users",
+      "exclusive": false,
+      "detail": "เขียนเฉพาะ routes/admin.js และ views/admin/* · Audit ADMIN_CHANGE EXPORT (CSV) · ยอดที่ล็อกตอน PENDING_PAYMENT ต้องไม่ถูกกระทบเมื่อแก้ค่าธรรมเนียม (BR-11)",
+      "timeout": 1500
+    },
+    {
+      "id": "B14",
+      "title": "รวมระบบ + รัน Playwright 51 TC + BUG_MODE B01–B12",
+      "size": "L",
+      "depends_on": [
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09",
+        "B10",
+        "B11",
+        "B12",
+        "B13"
+      ],
+      "skill": "yolo",
+      "difficulty": 4,
+      "output": "INTEGRATION.md",
+      "done": "docker compose up ได้ · Playwright รันครบ 51 TC ผ่านหมดเมื่อไม่ตั้ง BUG_MODE · เปิด BUG_MODE ทีละตัว B01–B12 แล้ว TC ที่ BUGS.md ระบุล้มจริง · INTEGRATION.md สรุปผลรันและข้อที่ล้ม (เว็บผิด/test ผิด/โจทย์ผิด)",
+      "exclusive": true,
+      "detail": "บล็อกรวมรันคนเดียว แก้ไฟล์ของบล็อกอื่นได้เมื่อจำเป็น ห้ามแก้ผลที่คาดหวังใน test ให้ตรงกับหน้าจอ · ตรวจ routes ชนกัน และ data-testid ตาม CONTRACT",
+      "timeout": 3000
+    }
+  ]
+}

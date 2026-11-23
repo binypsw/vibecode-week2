@@ -1,0 +1,2701 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/workspace/plans/egov-eservice/app/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/workspace/plans/egov-eservice/app/playwright.config.js",
+    "rootDir": "/workspace/plans/egov-eservice/app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/plans/egov-eservice/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/plans/egov-eservice/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/plans/egov-eservice/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/workspace/plans/egov-eservice/app/tests",
+        "snapshotDir": "/workspace/plans/egov-eservice/app/tests",
+        "testIgnore": [],
+        "testMatch": {},
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://localhost:3000",
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "executablePath": "/ms-playwright/chromium_headless_shell-1252/chrome-headless-shell-linux64/chrome-headless-shell"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "pw-report/normal-1.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "part-a.spec.js",
+      "file": "part-a.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-AUTH-01 · เลขบัตร 13 หลักและ checksum",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "110170012345",
+                      "duration": 259
+                    },
+                    {
+                      "title": "11017001234567",
+                      "duration": 160
+                    },
+                    {
+                      "title": "1101700123457",
+                      "duration": 151
+                    },
+                    {
+                      "title": "11017001234ab",
+                      "duration": 149
+                    },
+                    {
+                      "title": "1101700123456",
+                      "duration": 166
+                    },
+                    {
+                      "title": "3100600987659",
+                      "duration": 153
+                    },
+                    {
+                      "title": "1909900555015",
+                      "duration": 165
+                    },
+                    {
+                      "title": "5500400111221",
+                      "duration": 161
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:12:57.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-2878663eca21cd6b046e",
+          "file": "part-a.spec.js",
+          "line": 319,
+          "column": 1
+        },
+        {
+          "title": "TC-AUTH-02 · ล็อก OTP 15 นาทีและรีเซ็ตตัวนับ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1495,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:12:59.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-3b4460e7e80c65665156",
+          "file": "part-a.spec.js",
+          "line": 345,
+          "column": 1
+        },
+        {
+          "title": "TC-AUTH-03 · ลงทะเบียนครั้งแรก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:00.909Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-bea3bfe4d503127d80c6",
+          "file": "part-a.spec.js",
+          "line": 396,
+          "column": 1
+        },
+        {
+          "title": "TC-AUTH-04 · SSO และหน้าตั้งต้นของเจ้าหน้าที่ทุกบทบาท",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "off.reg1",
+                      "duration": 299
+                    },
+                    {
+                      "title": "off.reg2",
+                      "duration": 268
+                    },
+                    {
+                      "title": "off.works1",
+                      "duration": 246
+                    },
+                    {
+                      "title": "head1",
+                      "duration": 250
+                    },
+                    {
+                      "title": "exec1",
+                      "duration": 264
+                    },
+                    {
+                      "title": "audit1",
+                      "duration": 253
+                    },
+                    {
+                      "title": "admin1",
+                      "duration": 273
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:02.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-0f89d8f4bd217ca4ba2a",
+          "file": "part-a.spec.js",
+          "line": 436,
+          "column": 1
+        },
+        {
+          "title": "TC-FEE-01 · ค่าธรรมเนียมและค่าขอบของทั้งสามบริการ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 858,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "SV-03 0",
+                      "duration": 55
+                    },
+                    {
+                      "title": "SV-03 -1",
+                      "duration": 21
+                    },
+                    {
+                      "title": "SV-03 1",
+                      "duration": 51
+                    },
+                    {
+                      "title": "SV-03 100",
+                      "duration": 36
+                    },
+                    {
+                      "title": "SV-03 101",
+                      "duration": 37
+                    },
+                    {
+                      "title": "SV-03 102",
+                      "duration": 34
+                    },
+                    {
+                      "title": "SV-03 250",
+                      "duration": 35
+                    },
+                    {
+                      "title": "SV-03 300",
+                      "duration": 33
+                    },
+                    {
+                      "title": "SV-03 499",
+                      "duration": 35
+                    },
+                    {
+                      "title": "SV-03 500",
+                      "duration": 33
+                    },
+                    {
+                      "title": "SV-03 501",
+                      "duration": 23
+                    },
+                    {
+                      "title": "SV-01 0",
+                      "duration": 32
+                    },
+                    {
+                      "title": "SV-01 1",
+                      "duration": 32
+                    },
+                    {
+                      "title": "SV-01 2",
+                      "duration": 32
+                    },
+                    {
+                      "title": "SV-01 3",
+                      "duration": 33
+                    },
+                    {
+                      "title": "SV-01 4",
+                      "duration": 31
+                    },
+                    {
+                      "title": "SV-01 5",
+                      "duration": 30
+                    },
+                    {
+                      "title": "SV-01 6",
+                      "duration": 20
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:05.059Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-1ee9acf3f3c44f5537b6",
+          "file": "part-a.spec.js",
+          "line": 462,
+          "column": 1
+        },
+        {
+          "title": "TC-SUBMIT-01 · ยื่น SV-01 ตั้งแต่กรอกข้อมูลถึงเข้าคิว",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 962,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:05.926Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-6ba2314c1914e625e443",
+          "file": "part-a.spec.js",
+          "line": 502,
+          "column": 1
+        },
+        {
+          "title": "TC-SUBMIT-02 · เอกสารบังคับครบก่อนชำระ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 857,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:06.896Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-edd3476f6864fe1510e3",
+          "file": "part-a.spec.js",
+          "line": 565,
+          "column": 1
+        },
+        {
+          "title": "TC-SUBMIT-03 · ร่าง การยกเลิก และยกเลิกชนกับรับเรื่อง",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2427,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "A · บันทึกร่าง",
+                      "duration": 477
+                    },
+                    {
+                      "title": "B · ยกเลิกก่อนเจ้าหน้าที่รับเรื่อง",
+                      "duration": 656
+                    },
+                    {
+                      "title": "C · ยกเลิกเคสที่เจ้าหน้าที่รับแล้ว",
+                      "duration": 425
+                    },
+                    {
+                      "title": "E · ลบร่างและตัด QR เดิม",
+                      "duration": 370
+                    },
+                    {
+                      "title": "F · ยกเลิกและรับเรื่องพร้อมกัน",
+                      "duration": 374
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:07.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-f2a098820ee666aecd02",
+          "file": "part-a.spec.js",
+          "line": 605,
+          "column": 1
+        },
+        {
+          "title": "TC-UPLOAD-01 · ขนาด 5 MB และจำนวนสูงสุด 5 ไฟล์",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "5242879 bytes",
+                      "duration": 1299
+                    },
+                    {
+                      "title": "5242880 bytes",
+                      "duration": 1233
+                    },
+                    {
+                      "title": "5242881 bytes",
+                      "duration": 438
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:10.196Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-d1bc81eed93109aa4505",
+          "file": "part-a.spec.js",
+          "line": 702,
+          "column": 1
+        },
+        {
+          "title": "TC-UPLOAD-02 · ตรวจชนิดไฟล์จากเนื้อหาและไม่เก็บไฟล์ที่ปฏิเสธ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1430,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "fake-text.pdf · text",
+                      "duration": 114
+                    },
+                    {
+                      "title": "fake-text.jpg · text",
+                      "duration": 116
+                    },
+                    {
+                      "title": "exe-as.png · exe",
+                      "duration": 116
+                    },
+                    {
+                      "title": "notes.txt · text",
+                      "duration": 117
+                    },
+                    {
+                      "title": "fake-text.pdf · application/pdf",
+                      "duration": 114
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:13.894Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-d02951cbc366744ffafb",
+          "file": "part-a.spec.js",
+          "line": 749,
+          "column": 1
+        },
+        {
+          "title": "TC-PAY-01 · QR ใช้ได้ก่อนครบ 15 นาทีและสร้างใหม่ได้",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 936,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "2026-12-01T09:00:00+07:00",
+                      "duration": 84
+                    },
+                    {
+                      "title": "2026-12-01T09:09:59+07:00",
+                      "duration": 183
+                    },
+                    {
+                      "title": "2026-12-01T09:10:00+07:00",
+                      "duration": 408
+                    },
+                    {
+                      "title": "2026-12-01T09:10:01+07:00",
+                      "duration": 184
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:15.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-4f55f7cad774a7cde964",
+          "file": "part-a.spec.js",
+          "line": 794,
+          "column": 1
+        },
+        {
+          "title": "TC-PAY-02 · ยอดขาด ยอดเกิน และ callback ซ้ำ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:16.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-631a33e72fb5fa2c3535",
+          "file": "part-a.spec.js",
+          "line": 829,
+          "column": 1
+        },
+        {
+          "title": "TC-PAY-03 · ชำระพร้อมกันหกใบและแยกเจ้าของ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 820,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:16.679Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-df9e1ec9149cd98c1872",
+          "file": "part-a.spec.js",
+          "line": 845,
+          "column": 1
+        },
+        {
+          "title": "TC-PAY-04 · เลขคำขอและใบเสร็จข้ามปี",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:17.506Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-ab7b3110e51c70759c63",
+          "file": "part-a.spec.js",
+          "line": 870,
+          "column": 1
+        },
+        {
+          "title": "TC-QUEUE-01 · ลำดับคิว ตัวกรอง และขอบเขตแผนก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1143,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:18.179Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-d91dc968fdb5b0341726",
+          "file": "part-a.spec.js",
+          "line": 898,
+          "column": 1
+        },
+        {
+          "title": "TC-QUEUE-02 · รับเรื่องชนกันบนหน้าเว็บและ API",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1569,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "กดรับเรื่องพร้อมกันจากสอง session",
+                      "duration": 431
+                    },
+                    {
+                      "title": "ส่งคำสั่งรับเรื่อง 10 ครั้งพร้อมกัน",
+                      "duration": 478
+                    },
+                    {
+                      "title": "รับเรื่องตามลำดับแล้วลองรับซ้ำ",
+                      "duration": 504
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:19.329Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-06256392a5b493805209",
+          "file": "part-a.spec.js",
+          "line": 961,
+          "column": 1
+        },
+        {
+          "title": "TC-QUEUE-03 · เพดาน 10 งานและส่งแก้คืนผู้ถือเดิม",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:20.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-829150094695c8eba080",
+          "file": "part-a.spec.js",
+          "line": 1032,
+          "column": 1
+        },
+        {
+          "title": "TC-SLA-01 · กำหนดเสร็จตามวันทำการและเวลาตัดรอบ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2922,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "a · SV-01 · 2026-12-01T09:00:00+07:00",
+                      "duration": 199
+                    },
+                    {
+                      "title": "b · SV-01 · 2026-12-01T16:29:00+07:00",
+                      "duration": 308
+                    },
+                    {
+                      "title": "c · SV-01 · 2026-12-01T16:30:00+07:00",
+                      "duration": 308
+                    },
+                    {
+                      "title": "d · SV-01 · 2026-12-04T10:00:00+07:00",
+                      "duration": 319
+                    },
+                    {
+                      "title": "e · SV-01 · 2026-12-05T10:00:00+07:00",
+                      "duration": 319
+                    },
+                    {
+                      "title": "f · SV-02 · 2026-12-01T09:00:00+07:00",
+                      "duration": 320
+                    },
+                    {
+                      "title": "g · SV-03 · 2026-12-01T09:00:00+07:00",
+                      "duration": 387
+                    },
+                    {
+                      "title": "h · SV-01 · 2026-12-29T10:00:00+07:00",
+                      "duration": 347
+                    },
+                    {
+                      "title": "i · SV-01 · 2026-12-31T23:59:00+07:00",
+                      "duration": 323
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:22.698Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-6ba323894a885ea98047",
+          "file": "part-a.spec.js",
+          "line": 1077,
+          "column": 1
+        },
+        {
+          "title": "TC-SLA-02 · หยุดนับ SLA ระหว่างรอแก้และเริ่มนับอีกครั้ง",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3395,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "ตีกลับหนึ่งวันทำการก่อนส่งแก้",
+                      "duration": 759
+                    },
+                    {
+                      "title": "ส่งแก้คำขอใน seed · 2026-12-01T09:00:00+07:00",
+                      "duration": 368
+                    },
+                    {
+                      "title": "ส่งแก้คำขอใน seed · 2026-12-04T10:00:00+07:00",
+                      "duration": 342
+                    },
+                    {
+                      "title": "ตีกลับและส่งแก้ในวันเดียวกัน",
+                      "duration": 918
+                    },
+                    {
+                      "title": "คร่อมวันหยุดและส่งแก้หลัง 16:30",
+                      "duration": 896
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:25.626Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-b32a95a016221926f602",
+          "file": "part-a.spec.js",
+          "line": 1115,
+          "column": 1
+        },
+        {
+          "title": "TC-SLA-03 · ปกติ ใกล้ครบกำหนด เกินกำหนด หยุดนับ และปิดแล้ว",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "2026-12-01T09:00:00+07:00 · normal",
+                      "duration": 73
+                    },
+                    {
+                      "title": "2026-12-02T09:00:00+07:00 · normal",
+                      "duration": 65
+                    },
+                    {
+                      "title": "2026-12-03T09:00:00+07:00 · near",
+                      "duration": 65
+                    },
+                    {
+                      "title": "2026-12-04T16:30:00+07:00 · near",
+                      "duration": 69
+                    },
+                    {
+                      "title": "2026-12-04T16:30:01+07:00 · overdue",
+                      "duration": 64
+                    },
+                    {
+                      "title": "2026-12-04T16:31:00+07:00 · overdue",
+                      "duration": 57
+                    },
+                    {
+                      "title": "2026-12-05T10:00:00+07:00 · overdue",
+                      "duration": 57
+                    },
+                    {
+                      "title": "2026-12-03T09:00:00+07:00 · normal",
+                      "duration": 87
+                    },
+                    {
+                      "title": "2026-12-04T09:00:00+07:00 · near",
+                      "duration": 72
+                    },
+                    {
+                      "title": "2026-12-08T16:30:00+07:00 · near",
+                      "duration": 82
+                    },
+                    {
+                      "title": "2026-12-08T16:31:00+07:00 · overdue",
+                      "duration": 69
+                    },
+                    {
+                      "title": "2026-12-01T16:30:00+07:00 · near",
+                      "duration": 66
+                    },
+                    {
+                      "title": "2026-12-01T16:31:00+07:00 · overdue",
+                      "duration": 71
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:29.029Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-d612c276c12d0aa4b872",
+          "file": "part-a.spec.js",
+          "line": 1180,
+          "column": 1
+        },
+        {
+          "title": "TC-NOTI-01 · ผู้รับแจ้งเตือนตามระดับและแผนก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 890,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:30.960Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-6181dc25a90e9263f0a8",
+          "file": "part-a.spec.js",
+          "line": 1279,
+          "column": 1
+        },
+        {
+          "title": "TC-NOTI-02 · แจ้งครั้งเดียวต่อระดับ ข้ามระดับ และส่งตามขั้นตอน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3503,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "เปิดหน้าและเรียก API ซ้ำโดยไม่มีรายการเพิ่ม",
+                      "duration": 1473
+                    },
+                    {
+                      "title": "เริ่มประเมินครั้งแรกเมื่อเลยกำหนดแล้ว",
+                      "duration": 867
+                    },
+                    {
+                      "title": "แจ้งหัวหน้าตอนรออนุมัติและแจ้งผู้ออกเอกสารตอนรอออก",
+                      "duration": 984
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:13:31.858Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ff84eb1446a5f2d10a3-0e50980b7c0e3a4b51ac",
+          "file": "part-a.spec.js",
+          "line": 1298,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "part-b.spec.js",
+      "file": "part-b.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-WORKFLOW-01 อนุมัติและออกเอกสาร SV-01",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 912,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'content-type')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'content-type')\n    at assertPdf (/workspace/plans/egov-eservice/app/tests/part-b.spec.js:211:17)\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:281:3",
+                    "location": {
+                      "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                      "column": 17,
+                      "line": 211
+                    },
+                    "snippet": "  209 |\n  210 | function assertPdf(headers, docNo) {\n> 211 |   expect(headers['content-type']).toMatch(/^application\\/pdf\\b/i)\n      |                 ^\n  212 |   if (docNo) {\n  213 |     expect(headers['content-disposition']).toContain(`${docNo}.pdf`)\n  214 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                        "column": 17,
+                        "line": 211
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'content-type')\n\n  209 |\n  210 | function assertPdf(headers, docNo) {\n> 211 |   expect(headers['content-type']).toMatch(/^application\\/pdf\\b/i)\n      |                 ^\n  212 |   if (docNo) {\n  213 |     expect(headers['content-disposition']).toContain(`${docNo}.pdf`)\n  214 |   }\n    at assertPdf (/workspace/plans/egov-eservice/app/tests/part-b.spec.js:211:17)\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:281:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:13:49.804Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-01-อนุมัติและออกเอกสาร-SV-01/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-01-อนุมัติและออกเอกสาร-SV-01/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-01-อนุมัติและออกเอกสาร-SV-01/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-01-อนุมัติและออกเอกสาร-SV-01/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                    "column": 17,
+                    "line": 211
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-97c00550bd1676f5b61b",
+          "file": "part-b.spec.js",
+          "line": 253,
+          "column": 1
+        },
+        {
+          "title": "TC-WORKFLOW-02 ส่ง SV-02 ผ่านหัวหน้าและออกเอกสาร",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:06.525Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-cbaf6d599f4634b42805",
+          "file": "part-b.spec.js",
+          "line": 289,
+          "column": 1
+        },
+        {
+          "title": "TC-WORKFLOW-03 ส่ง SV-03 ผ่านทะเบียน โยธา และหัวหน้า",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:08.369Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-a690cc2f55d514895956",
+          "file": "part-b.spec.js",
+          "line": 330,
+          "column": 1
+        },
+        {
+          "title": "TC-WORKFLOW-04 ตีกลับได้สูงสุดสองครั้งและรักษาสิทธิ์ตามบริการ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:09.681Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-cd670886f69437389513",
+          "file": "part-b.spec.js",
+          "line": 378,
+          "column": 1
+        },
+        {
+          "title": "TC-WORKFLOW-05 เหตุผลตีกลับและไม่อนุมัติอย่างน้อยสิบตัวอักษร",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:12.354Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-515b9237ad212c77428e",
+          "file": "part-b.spec.js",
+          "line": 431,
+          "column": 1
+        },
+        {
+          "title": "TC-WORKFLOW-06 ขอบเวลาแก้ไข 168 ชั่วโมง",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 518,
+                  "error": {
+                    "message": "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.",
+                    "stack": "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.\n    at json (/workspace/plans/egov-eservice/app/tests/part-b.spec.js:58:31)\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:488:3",
+                    "location": {
+                      "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                      "column": 31,
+                      "line": 58
+                    },
+                    "snippet": "  56 |   expect(response.status(), `${response.url()}: HTTP status`).toBe(status)\n  57 |   expect(response.headers()['content-type']).toMatch(/^application\\/json\\b/i)\n> 58 |   const body = await response.json()\n     |                               ^\n  59 |   if (fields) expect(body).toMatchObject(fields)\n  60 |   return body\n  61 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                        "column": 31,
+                        "line": 58
+                      },
+                      "message": "Error: response.json: Protocol error (Network.getResponseBody): No resource with given identifier found\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.\n\n  56 |   expect(response.status(), `${response.url()}: HTTP status`).toBe(status)\n  57 |   expect(response.headers()['content-type']).toMatch(/^application\\/json\\b/i)\n> 58 |   const body = await response.json()\n     |                               ^\n  59 |   if (fields) expect(body).toMatchObject(fields)\n  60 |   return body\n  61 | }\n    at json (/workspace/plans/egov-eservice/app/tests/part-b.spec.js:58:31)\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:488:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:13.815Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-06-ขอบเวลาแก้ไข-168-ชั่วโมง/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-06-ขอบเวลาแก้ไข-168-ชั่วโมง/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-WORKFLOW-06-ขอบเวลาแก้ไข-168-ชั่วโมง/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                    "column": 31,
+                    "line": 58
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-20deee6a827114bae64d",
+          "file": "part-b.spec.js",
+          "line": 467,
+          "column": 1
+        },
+        {
+          "title": "TC-DOC-01 ออก PDF และตรวจข้อมูลเอกสาร",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:29.978Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-c05f78452f82e0805412",
+          "file": "part-b.spec.js",
+          "line": 504,
+          "column": 1
+        },
+        {
+          "title": "TC-DOC-02 ตรวจเอกสารสาธารณะและปิดบังข้อมูล",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:30.943Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-da846fff15a53d85644f",
+          "file": "part-b.spec.js",
+          "line": 539,
+          "column": 1
+        },
+        {
+          "title": "TC-DOC-03 ขอบวันหมดอายุ วันอธิกสุรทิน และความถูกต้องของลายเซ็น",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:31.182Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-70ffcb66513b9dd80e3a",
+          "file": "part-b.spec.js",
+          "line": 553,
+          "column": 1
+        },
+        {
+          "title": "TC-PDPA-01 ปิดบังเลขบัตรเจ้าหน้าที่และให้เจ้าของเห็นเลขเต็ม",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 688,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:32.830Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-75a849f546f3593f101a",
+          "file": "part-b.spec.js",
+          "line": 591,
+          "column": 1
+        },
+        {
+          "title": "TC-PDPA-02 จำกัดข้อมูลเลขบัตรใน JSON เจ้าหน้าที่และหัวหน้า",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:33.525Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-199a40c6d6604a12358f",
+          "file": "part-b.spec.js",
+          "line": 624,
+          "column": 1
+        },
+        {
+          "title": "TC-PDPA-03 แสดงเลขเต็มหลังให้เหตุผลและบันทึก Audit ครั้งเดียว",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 967,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:33.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-268d125631c4d27067c9",
+          "file": "part-b.spec.js",
+          "line": 650,
+          "column": 1
+        },
+        {
+          "title": "TC-DASH-01 ตัวเลขเริ่มต้นและตัวกรองบริการ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:34.843Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-534eec3874a3e1df02de",
+          "file": "part-b.spec.js",
+          "line": 712,
+          "column": 1
+        },
+        {
+          "title": "TC-DASH-02 ตัวเลขย้อนหลังและเปอร์เซ็นต์จากจำนวนปิดงาน",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "2026-10 ALL",
+                      "duration": 56
+                    },
+                    {
+                      "title": "2026-11 ALL",
+                      "duration": 38
+                    },
+                    {
+                      "title": "2026-11 SV-01",
+                      "duration": 34
+                    },
+                    {
+                      "title": "2026-11 SV-02",
+                      "duration": 31
+                    },
+                    {
+                      "title": "2026-11 SV-03",
+                      "duration": 33
+                    },
+                    {
+                      "title": "2026 ALL",
+                      "duration": 34
+                    },
+                    {
+                      "title": "2026 SV-01",
+                      "duration": 33
+                    },
+                    {
+                      "title": "2026 SV-02",
+                      "duration": 34
+                    },
+                    {
+                      "title": "2026 SV-03",
+                      "duration": 36
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:14:35.243Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-5a45130424622490052c",
+          "file": "part-b.spec.js",
+          "line": 739,
+          "column": 1
+        },
+        {
+          "title": "TC-DASH-03 ส่งออก Excel/PDF ตรงกับ KPI และไม่มีข้อมูลส่วนบุคคล",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1295,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:35.831Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-cc3910c32d1aa5ba923d",
+          "file": "part-b.spec.js",
+          "line": 799,
+          "column": 1
+        },
+        {
+          "title": "TC-DASH-04 ขอบเวลาปิดงาน 16:29:59 / 16:30:00 / 16:30:01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 841,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:37.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-1496d77696ce0bf7009c",
+          "file": "part-b.spec.js",
+          "line": 843,
+          "column": 1
+        },
+        {
+          "title": "TC-AUDIT-01 บันทึกเหตุการณ์ ฟิลด์ ตัวกรอง และ CSV",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:37.986Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-00d5dd0a845233eda128",
+          "file": "part-b.spec.js",
+          "line": 871,
+          "column": 1
+        },
+        {
+          "title": "TC-AUDIT-02 API และหน้าจอไม่อนุญาตให้แก้หรือลบ Audit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:39.577Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-062dd048f69042c3dd37",
+          "file": "part-b.spec.js",
+          "line": 961,
+          "column": 1
+        },
+        {
+          "title": "TC-AUDIT-03 ช่วงวันที่ Audit ใช้เขตเวลาไทย",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "2026-12-01 ถึง 2026-12-01 ",
+                      "duration": 130
+                    },
+                    {
+                      "title": "2026-11-30 ถึง 2026-11-30 ",
+                      "duration": 111
+                    },
+                    {
+                      "title": "2026-11-30 ถึง 2026-12-01 ",
+                      "duration": 109
+                    },
+                    {
+                      "title": "2026-12-02 ถึง … ",
+                      "duration": 114
+                    },
+                    {
+                      "title": "… ถึง 2026-11-30 ",
+                      "duration": 113
+                    },
+                    {
+                      "title": "2026-12-01 ถึง 2026-12-02 ",
+                      "duration": 117
+                    },
+                    {
+                      "title": "2026-12-01 ถึง 2026-12-01 off.reg2",
+                      "duration": 124
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:14:39.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-be2ca09131a4774a029b",
+          "file": "part-b.spec.js",
+          "line": 988,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-01 จำกัดการเปิดคำขอและเอกสารให้เฉพาะเจ้าของ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 365,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:41.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-57c7c9ba8b06e0c9715c",
+          "file": "part-b.spec.js",
+          "line": 1028,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-02 เฉพาะหัวหน้าอนุมัติและไม่อนุมัติ SV-02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:41.732Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-88bd5187cd929d5f3174",
+          "file": "part-b.spec.js",
+          "line": 1051,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-03 ตารางสิทธิ์หน้า API เมนู และแผนก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4193,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "anon",
+                      "duration": 491
+                    },
+                    {
+                      "title": "citizen",
+                      "duration": 603
+                    },
+                    {
+                      "title": "officer",
+                      "duration": 571
+                    },
+                    {
+                      "title": "head",
+                      "duration": 505
+                    },
+                    {
+                      "title": "executive",
+                      "duration": 526
+                    },
+                    {
+                      "title": "auditor",
+                      "duration": 525
+                    },
+                    {
+                      "title": "admin",
+                      "duration": 579
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:14:42.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-0289915f4cb6d4aa4f06",
+          "file": "part-b.spec.js",
+          "line": 1075,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-04 เปลี่ยนบริการ วันหยุด บทบาท และตรวจยอดที่ล็อก",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:46.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-d8afe2f5d1a54f009ffa",
+          "file": "part-b.spec.js",
+          "line": 1169,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-05 ขอบเขตการแสดงรายการและดาวน์โหลดไฟล์แนบ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1419,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:14:48.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-9374a79288fafbbab877",
+          "file": "part-b.spec.js",
+          "line": 1231,
+          "column": 1
+        },
+        {
+          "title": "TC-RBAC-06 ค่าขอบค่าธรรมเนียม SLA วันหยุด และการแก้บทบาทตนเอง",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "fee = -1",
+                      "duration": 137
+                    },
+                    {
+                      "title": "fee = 0",
+                      "duration": 103
+                    },
+                    {
+                      "title": "fee = 100000",
+                      "duration": 115
+                    },
+                    {
+                      "title": "fee = 100001",
+                      "duration": 137
+                    },
+                    {
+                      "title": "sla = 0",
+                      "duration": 125
+                    },
+                    {
+                      "title": "sla = 1",
+                      "duration": 97
+                    },
+                    {
+                      "title": "sla = 60",
+                      "duration": 98
+                    },
+                    {
+                      "title": "sla = 61",
+                      "duration": 123
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:14:49.722Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-17e346eab2b642c1e29c",
+          "file": "part-b.spec.js",
+          "line": 1298,
+          "column": 1
+        },
+        {
+          "title": "TC-NFR-01 Responsive 375 / 768 / 1280 และยื่นคำขอที่ 375px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 12049,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('to-payment-btn')\nExpected: enabled\nReceived: disabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByTestId('to-payment-btn') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('to-payment-btn')\u001b[22m\n\u001b[2m    24 × locator resolved to <button disabled class=\"btn\" type=\"button\" id=\"to-payment-btn\" data-testid=\"to-payment-btn\">ไปชำระเงิน</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('to-payment-btn')\nExpected: enabled\nReceived: disabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByTestId('to-payment-btn') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('to-payment-btn')\u001b[22m\n\u001b[2m    24 × locator resolved to <button disabled class=\"btn\" type=\"button\" id=\"to-payment-btn\" data-testid=\"to-payment-btn\">ไปชำระเงิน</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:1396:44",
+                    "location": {
+                      "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                      "column": 44,
+                      "line": 1396
+                    },
+                    "snippet": "  1394 |   await id(page, 'to-upload-btn').click()\n  1395 |   await id(page, 'upload-input-id-card').setInputFiles(pdfUpload())\n> 1396 |   await expect(id(page, 'to-payment-btn')).toBeEnabled()\n       |                                            ^\n  1397 |   await id(page, 'to-payment-btn').click()\n  1398 |   const createQr = id(page, 'create-qr-btn')\n  1399 |   await expect(createQr).toBeVisible()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                        "column": 44,
+                        "line": 1396
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('to-payment-btn')\nExpected: enabled\nReceived: disabled\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" getByTestId('to-payment-btn') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('to-payment-btn')\u001b[22m\n\u001b[2m    24 × locator resolved to <button disabled class=\"btn\" type=\"button\" id=\"to-payment-btn\" data-testid=\"to-payment-btn\">ไปชำระเงิน</button>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n\n  1394 |   await id(page, 'to-upload-btn').click()\n  1395 |   await id(page, 'upload-input-id-card').setInputFiles(pdfUpload())\n> 1396 |   await expect(id(page, 'to-payment-btn')).toBeEnabled()\n       |                                            ^\n  1397 |   await id(page, 'to-payment-btn').click()\n  1398 |   const createQr = id(page, 'create-qr-btn')\n  1399 |   await expect(createQr).toBeVisible()\n    at /workspace/plans/egov-eservice/app/tests/part-b.spec.js:1396:44"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "375×812 /login",
+                      "duration": 35
+                    },
+                    {
+                      "title": "375×812 /citizen",
+                      "duration": 63
+                    },
+                    {
+                      "title": "375×812 /citizen/new/SV-03",
+                      "duration": 22
+                    },
+                    {
+                      "title": "375×812 /citizen/cases/EG-2569-000013",
+                      "duration": 27
+                    },
+                    {
+                      "title": "375×812 /officer/queue",
+                      "duration": 66
+                    },
+                    {
+                      "title": "375×812 /officer/cases/EG-2569-000020",
+                      "duration": 30
+                    },
+                    {
+                      "title": "375×812 /head/approvals",
+                      "duration": 41
+                    },
+                    {
+                      "title": "375×812 /dashboard",
+                      "duration": 50
+                    },
+                    {
+                      "title": "375×812 /audit",
+                      "duration": 41
+                    },
+                    {
+                      "title": "375×812 /admin/services",
+                      "duration": 37
+                    },
+                    {
+                      "title": "375×812 /verify/K7M2Q9XA",
+                      "duration": 21
+                    },
+                    {
+                      "title": "768×1024 /login",
+                      "duration": 17
+                    },
+                    {
+                      "title": "768×1024 /citizen",
+                      "duration": 43
+                    },
+                    {
+                      "title": "768×1024 /citizen/new/SV-03",
+                      "duration": 19
+                    },
+                    {
+                      "title": "768×1024 /citizen/cases/EG-2569-000013",
+                      "duration": 26
+                    },
+                    {
+                      "title": "768×1024 /officer/queue",
+                      "duration": 47
+                    },
+                    {
+                      "title": "768×1024 /officer/cases/EG-2569-000020",
+                      "duration": 31
+                    },
+                    {
+                      "title": "768×1024 /head/approvals",
+                      "duration": 28
+                    },
+                    {
+                      "title": "768×1024 /dashboard",
+                      "duration": 34
+                    },
+                    {
+                      "title": "768×1024 /audit",
+                      "duration": 27
+                    },
+                    {
+                      "title": "768×1024 /admin/services",
+                      "duration": 22
+                    },
+                    {
+                      "title": "768×1024 /verify/K7M2Q9XA",
+                      "duration": 20
+                    },
+                    {
+                      "title": "1280×800 /login",
+                      "duration": 17
+                    },
+                    {
+                      "title": "1280×800 /citizen",
+                      "duration": 43
+                    },
+                    {
+                      "title": "1280×800 /citizen/new/SV-03",
+                      "duration": 22
+                    },
+                    {
+                      "title": "1280×800 /citizen/cases/EG-2569-000013",
+                      "duration": 27
+                    },
+                    {
+                      "title": "1280×800 /officer/queue",
+                      "duration": 45
+                    },
+                    {
+                      "title": "1280×800 /officer/cases/EG-2569-000020",
+                      "duration": 32
+                    },
+                    {
+                      "title": "1280×800 /head/approvals",
+                      "duration": 27
+                    },
+                    {
+                      "title": "1280×800 /dashboard",
+                      "duration": 35
+                    },
+                    {
+                      "title": "1280×800 /audit",
+                      "duration": 24
+                    },
+                    {
+                      "title": "1280×800 /admin/services",
+                      "duration": 25
+                    },
+                    {
+                      "title": "1280×800 /verify/K7M2Q9XA",
+                      "duration": 21
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:14:51.166Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-8.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-6.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-4.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-5.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/test-failed-7.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/plans/egov-eservice/app/test-results/part-b-TC-NFR-01-Responsiv-7880f-8-1280-และยื่นคำขอที่-375px/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/plans/egov-eservice/app/tests/part-b.spec.js",
+                    "column": 44,
+                    "line": 1396
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-3c1e139147a3148fd2d2",
+          "file": "part-b.spec.js",
+          "line": 1359,
+          "column": 1
+        },
+        {
+          "title": "TC-NFR-02 WCAG axe คีย์บอร์ด label และข้อความสถานะ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "/login",
+                      "duration": 480
+                    },
+                    {
+                      "title": "/register",
+                      "duration": 396
+                    },
+                    {
+                      "title": "/citizen",
+                      "duration": 933
+                    },
+                    {
+                      "title": "/citizen/new/SV-01",
+                      "duration": 298
+                    },
+                    {
+                      "title": "/citizen/cases/EG-2569-000017",
+                      "duration": 360
+                    },
+                    {
+                      "title": "/officer/queue",
+                      "duration": 1140
+                    },
+                    {
+                      "title": "/officer/cases/EG-2569-000020",
+                      "duration": 382
+                    },
+                    {
+                      "title": "/head/approvals",
+                      "duration": 416
+                    },
+                    {
+                      "title": "/dashboard",
+                      "duration": 439
+                    },
+                    {
+                      "title": "/audit",
+                      "duration": 411
+                    },
+                    {
+                      "title": "/admin/services",
+                      "duration": 399
+                    },
+                    {
+                      "title": "/notifications",
+                      "duration": 256
+                    },
+                    {
+                      "title": "/verify/K7M2Q9XA",
+                      "duration": 261
+                    },
+                    {
+                      "title": "ยื่นคำขอโดยใช้คีย์บอร์ด",
+                      "duration": 684
+                    }
+                  ],
+                  "startTime": "2026-11-22T05:15:18.980Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-2644ca751c4a6d199dee",
+          "file": "part-b.spec.js",
+          "line": 1469,
+          "column": 1
+        },
+        {
+          "title": "TC-NFR-03 Health เวลาโหลด นาฬิกา และผลหลัง reset ที่ทำซ้ำได้",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:15:26.746Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-e8b9f2881325de7308f2",
+          "file": "part-b.spec.js",
+          "line": 1538,
+          "column": 1
+        },
+        {
+          "title": "TC-NFR-04 ตรวจเลขบัตรและเบอร์โทรใน DB ดัมพ์ และ log",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "encryption",
+                  "description": "AES-256-GCM (documented by B01)"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 800,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T05:15:27.988Z",
+                  "annotations": [
+                    {
+                      "type": "encryption",
+                      "description": "AES-256-GCM (documented by B01)"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c67edd5310d9b64b492-36c9f3bf0923ecb08837",
+          "file": "part-b.spec.js",
+          "line": 1599,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-22T05:12:41.759Z",
+    "duration": 167124.444,
+    "expected": 48,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
